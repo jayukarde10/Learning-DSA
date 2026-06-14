@@ -1,0 +1,50 @@
+What is Time Complexity?
+
+Time complexity measures how the running time of an algorithm grows as input size n increases.
+
+Common Complexities
+Complexity	Name	Example
+O(1)	Constant	Access array element
+O(log n)	Logarithmic	Binary Search
+O(n)	Linear	Traverse array
+O(n log n)	Linearithmic	Merge Sort
+O(n²)	Quadratic	Nested loops
+O(2ⁿ)	Exponential	Recursive Fibonacci
+Example 1: O(1)
+arr = [10, 20, 30, 40]
+print(arr[2])
+
+Accessing any index takes the same time.
+
+Time Complexity: O(1)
+
+Example 2: O(n)
+arr = [10, 20, 30, 40, 50]
+
+for x in arr:
+    print(x)
+
+Loop runs n times.
+
+Time Complexity: O(n)
+
+Example 3: O(n²)
+n = 5
+
+for i in range(n):
+    for j in range(n):
+        print(i, j)
+
+Nested loops.
+
+Time Complexity: O(n²)
+
+Space Complexity
+
+Extra memory used by an algorithm.
+
+arr = [1, 2, 3, 4, 5]
+
+Stores 5 elements.
+
+Space Complexity: O(n)
