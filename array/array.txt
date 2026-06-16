@@ -1,0 +1,331 @@
+# DSA Revision Sheet (Arrays + Fundamentals)
+
+## 1. Largest Element
+
+Goal: Find maximum value in array.
+
+Logic:
+
+* Assume first element is largest.
+* Traverse array.
+* Update if larger element found.
+
+Pattern:
+largest = max(largest, num)
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 2. Smallest Element
+
+Goal: Find minimum value in array.
+
+Logic:
+
+* Assume first element is smallest.
+* Traverse array.
+* Update if smaller element found.
+
+Pattern:
+smallest = min(smallest, num)
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 3. Sum of Array
+
+Goal: Find total of all elements.
+
+Logic:
+
+* Initialize sum = 0
+* Add each element.
+
+Pattern:
+total += num
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 4. Count Even Numbers
+
+Goal: Count elements divisible by 2.
+
+Logic:
+Check:
+num % 2 == 0
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 5. Reverse Array
+
+Goal: Reverse order of elements.
+
+Python Shortcut:
+arr[::-1]
+
+Manual Logic:
+Start from end and move backward.
+
+Time: O(n)
+Space: O(n)
+
+---
+
+## 6. Second Largest Element
+
+Goal: Find largest and second largest.
+
+Logic:
+Maintain:
+largest
+second_largest
+
+Formula:
+if num > largest:
+second_largest = largest
+largest = num
+elif largest > num > second_largest:
+second_largest = num
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 7. Second Smallest Element
+
+Goal: Find smallest and second smallest.
+
+Logic:
+Maintain:
+smallest
+second_smallest
+
+Formula:
+if num < smallest:
+second_smallest = smallest
+smallest = num
+elif smallest < num < second_smallest:
+second_smallest = num
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 8. Linear Search
+
+Goal: Find target element index.
+
+Logic:
+Traverse array.
+If found return index.
+
+Pattern:
+if arr[i] == target
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 9. Frequency Count
+
+Goal: Count occurrences of target.
+
+Logic:
+Increase counter whenever target found.
+
+Pattern:
+if num == target:
+count += 1
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 10. Prefix Sum Array
+
+Goal: Store cumulative sums.
+
+Example:
+arr = [10,20,30,40]
+
+prefix:
+[10,30,60,100]
+
+Formula:
+prefix[i] = prefix[i-1] + arr[i]
+
+Time: O(n)
+Space: O(n)
+
+---
+
+## 11. Range Sum Query
+
+Goal: Sum between indices L and R.
+
+Formula:
+If L == 0:
+prefix[R]
+Else:
+prefix[R] - prefix[L-1]
+
+Time per query: O(1)
+
+---
+
+## 12. Two Pointers (Pair Sum)
+
+Goal: Find pair whose sum equals target.
+
+Works on sorted arrays.
+
+Formula:
+sum = arr[left] + arr[right]
+
+If sum < target:
+left += 1
+
+If sum > target:
+right -= 1
+
+If sum == target:
+Found
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 13. Sliding Window
+
+Goal: Maximum sum of K consecutive elements.
+
+Formula:
+window_sum = window_sum - outgoing + incoming
+
+Pattern:
+window_sum = window_sum - arr[i-k] + arr[i]
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 14. Move Zeroes
+
+Goal: Move all zeroes to end.
+
+Logic:
+Maintain position pointer.
+
+Pattern:
+if arr[i] != 0:
+swap(arr[pos], arr[i])
+pos += 1
+
+Time: O(n)
+Space: O(1)
+
+---
+
+## 15. Remove Duplicates (Manual)
+
+Goal: Keep unique elements.
+
+Logic:
+Add only if not already present.
+
+Pattern:
+if num not in result:
+result.append(num)
+
+Time: O(n²)
+Space: O(n)
+
+---
+
+## 16. Remove Duplicates (Hash Set)
+
+Goal: Faster duplicate removal.
+
+Pattern:
+seen = set()
+
+if num not in seen:
+seen.add(num)
+
+Time: O(n)
+Space: O(n)
+
+---
+
+## 17. Hash Set Concept
+
+Purpose:
+Fast lookup.
+
+List Lookup:
+O(n)
+
+Set Lookup:
+O(1)
+
+Use when:
+
+* Duplicate detection
+* Membership checking
+* Frequency problems
+
+---
+
+## 18. Kadane's Algorithm
+
+Goal: Maximum subarray sum.
+
+Core Idea:
+If current sum becomes harmful, start fresh.
+
+Formula:
+current_sum = max(arr[i], current_sum + arr[i])
+
+max_sum = max(max_sum, current_sum)
+
+Time: O(n)
+Space: O(1)
+
+Example:
+[-2,1,-3,4,-1,2,1,-5,4]
+
+Answer:
+6
+
+Subarray:
+[4,-1,2,1]
+
+---
+
+# Core Patterns Learned
+
+1. Traversal
+2. Linear Search
+3. Prefix Sum
+4. Two Pointers
+5. Sliding Window
+6. Hash Set
+7. Kadane's Algorithm
+
+These 7 patterns solve a huge percentage of beginner and intermediate array problems.

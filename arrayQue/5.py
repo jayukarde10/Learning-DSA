@@ -1,3 +1,4 @@
+#prefix sum array
 arr=[10,20,30,40,50]
 prefix=[]
 n=0

@@ -1,3 +1,4 @@
+#two sum problem using two pointer approach
 arr = [1, 3, 5, 7, 9]
 target = 12
 left=0
