@@ -1,5 +1,5 @@
 #sliding window
-s = "education"
+s = "educatioan"
 k = 3
 
 vowels = "aeiou"
