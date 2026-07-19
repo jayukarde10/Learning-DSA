@@ -12,6 +12,7 @@
 #     arr.insert(small,target)
 #     print(arr)
     
+#by binary logn
 arr = [1,3,5,7,9]
 target=6
 left = 0
