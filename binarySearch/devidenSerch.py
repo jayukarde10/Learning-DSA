@@ -4,7 +4,7 @@ left = 0
 right = len(arr) - 1
 
 while left <= right:
-    mid =(left+right)//2 # instead of int((left+right)/2)
+    mid =(left+right)//2 # instead of int((left+right)/2) can use abs()
     if arr[mid] == target:
         print("found at",mid)
         break
