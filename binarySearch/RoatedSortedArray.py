@@ -1,6 +1,6 @@
 # Rotated Sorted Array
 # Given a sorted array that has been rotated some number of times, find the index of a given element or target in the array. If the target is not found, return -1.
-a=[4,5,6,7,0,1,2]
+a=[4,5,6,7,8,0,1,2]
 target=8
 left=0
 right=len(a)-1
