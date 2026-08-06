@@ -1,0 +1,82 @@
+📌 Short Notes (Paste into your Recursion Notes)
+🧠 How to Think in Recursion
+1. Don't write code first.
+
+Ask:
+
+How would I solve this manually?
+
+Then identify the pattern.
+
+2. If the problem can be reduced to a smaller problem
+
+Examples:
+
+Sum of N
+Factorial
+Reverse Array
+Palindrome
+
+Think:
+
+Current Problem
+        ↓
+Smaller Problem
+
+Pattern:
+
+return current + f(smaller)
+
+or
+
+return current * f(smaller)
+3. If the problem asks for all possibilities (choices)
+
+Ask:
+
+What decision am I making?
+
+Examples:
+
+Take / Skip
+Include / Exclude
+Yes / No
+
+Pattern:
+
+# Choose
+temp.append(...)
+
+# Explore
+recursive_call()
+
+# Undo
+temp.pop()
+
+# Explore other choice
+recursive_call()
+
+Think:
+
+Choose
+   ↓
+Explore
+   ↓
+Undo
+   ↓
+Explore another choice
+4. Always identify the Base Case
+
+Ask:
+
+When should recursion stop?
+⭐ Golden Rule
+
+Don't memorize recursion code.
+
+First identify:
+
+Is this a Smaller Problem?
+Or is it a Decision Problem?
+
+Then the recursion structure becomes obvious.

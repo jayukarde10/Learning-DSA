@@ -28,4 +28,15 @@ for _ in range(7):
     print(a, end=" ")
     a, b = b, a + b
 
-    
+print("--------------------")
+def fun(n):
+    print("Start", n)
+
+    if n == 0:
+        return
+
+    fun(n-1)
+
+    print("End", n)
+
+fun(2) 
